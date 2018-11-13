@@ -85,15 +85,8 @@
 			//ciclo para hacer lo mismo que la segunda fila del excel
 
 		for ($i=2; $i<=$iteraciones; $i++) {
-			echo '<tr>' ;
-			if ($fa*$fc>0) {
-				$a=$c;
-			}
-			elseif ($fb*$fc>0) {
-				$b=$c;
-			}
-			
-				if ($_POST['eq'] == 'a') {
+
+			if ($_POST['eq'] == 'a') {
 					$fa = ($a*$a)+2-(exp($a));
 					$fb = ($b*$b)+2-(exp($b));
 					$fc = ($c*$c)+2-(exp($c));
@@ -108,6 +101,16 @@
 					$fb = ($b*$b*$b)-cos($b);
 					$fc = ($c*$c*$c)-cos($c);
 				}
+				
+			echo '<tr>' ;
+			if ($fa*$fc>0) {
+				$a=$c;
+			}
+			elseif ($fb*$fc>0) {
+				$b=$c;
+			}
+			
+				
 
 
 			$c = ($a+$b)/2;
